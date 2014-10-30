@@ -49,7 +49,7 @@ def send(message, channel):
 
 #Check for string is a command
 def command(cmd):
- if(line.find(CMD+cmd)!= -1): return True
+ if(line.find(COMMAND+cmd)!= -1): return True
 
 #Check if owner issued a command
 def ownerCommand(cmd):
