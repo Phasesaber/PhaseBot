@@ -63,3 +63,17 @@ def message(message, user):
  if(ident!=SERVER1 and ident!=SERVER2):
   sock.send(("PRIVMSG "+user+" :"+message+"\r\n").encode())
 
+while(True):
+ #Receive text and check if it's empty
+ try:text = sock.recv(2048).decode()
+ except:pass
+ for line in text.split("\r\n"):
+  #Parse
+  try:
+   message=line.split(" :")
+   message=message[1]
+   ident=line.split("!")
+   ident=ident[0].split(":")
+   ident=ident[1]
+  except: pass
+  #Run commands
