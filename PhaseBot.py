@@ -63,6 +63,16 @@ def message(message, user):
  if(ident!=SERVER1 and ident!=SERVER2):
   sock.send(("PRIVMSG "+user+" :"+message+"\r\n").encode())
 
+#Echo command
+def eecho():
+ if(command("echo "):
+  send(args("echo "), CHANNEL);
+
+#Runs all commands
+def runCommands():
+ printLine()
+ ping()
+
 while(True):
  #Receive text and check if it's empty
  try:text = sock.recv(2048).decode()
@@ -77,3 +87,4 @@ while(True):
    ident=ident[1]
   except: pass
   #Run commands
+  runCommands()
