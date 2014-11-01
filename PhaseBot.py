@@ -72,6 +72,7 @@ def eecho():
 def runCommands():
  printLine()
  ping()
+ eecho()
 
 while(True):
  #Receive text and check if it's empty
