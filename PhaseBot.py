@@ -129,7 +129,7 @@ def apply():
 
 def mentionName():
     if(text("phasebot")):
-        send("*cough*", CHANNEL)
+        send("*cough cough*", CHANNEL)
 
 #Runs all commands
 def runCommands():
