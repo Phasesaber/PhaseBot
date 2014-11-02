@@ -124,8 +124,12 @@ def quote():
         send(random_line("quotes.txt"), CHANNEL)
 
 def apply():
-    if(line.find("apply") != -1):
+    if(text("apply")):
         send("You can apply to build at http://openredstone.org/apply", CHANNEL)
+
+def mentionName():
+    if(text("phasebot")):
+        send("*cough*", CHANNEL)
 
 #Runs all commands
 def runCommands():
@@ -139,6 +143,7 @@ def runCommands():
     ttime()
     quote()
     apply()
+    mentionName()
 
 while True:
     #Receive text and check if it's empty
