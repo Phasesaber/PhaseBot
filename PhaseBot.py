@@ -93,7 +93,7 @@ def suck():
         send(args("suck ") + " sucks! What a loser!", CHANNEL)
 
 def add():
-    if(command("add") or command("a")):
+    if(command("add")):
         try:
             aargs = args("add ")
             aargs = aargs.split(" ")
