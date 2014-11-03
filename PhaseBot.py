@@ -21,6 +21,8 @@ sock.send(("NICK "+NICK+"\r\n").encode())
 sock.send(("USER "+IDENT+" "+HOST+" bla :"+REALNAME+"\r\n").encode())
 sock.send(("JOIN "+CHANNEL+"\r\n").encode())
 
+text = ""
+
 #Get the args
 def args(x):
     args = line.split(x)
@@ -62,7 +64,7 @@ def command(cmd):
 def ownerCommand(cmd):
     if(command(cmd) and (user()==OWNER or user()==OWNERIRC)): return True
 
-def text(text):
+def linecontains(text):
     return line.find(text) != -1
 
 #Sends a message to a user
@@ -124,11 +126,11 @@ def quote():
         send(random_line("quotes.txt"), CHANNEL)
 
 def apply():
-    if(text("apply")):
+    if(linecontains("apply")):
         send("You can apply to build at http://openredstone.org/apply", CHANNEL)
 
 def mentionName():
-    if(text("phasebot")):
+    if(linecontains("phasebot")):
         send("*cough cough*", CHANNEL)
 
 #Runs all commands
