@@ -37,18 +37,18 @@ def printLine():
 
 #Most recent user to send a message
 def recentUser():
-    if(ident!=SERVER1 and ident!=SERVER2): return ident
+    if ident != SERVER1 and ident != SERVER2: return ident
     user = line.split(":")
     return user[2]
 
 def user():
-    if(ident!=SERVER1 and ident!=SERVER2): return ident
+    ifident != SERVER1 and ident!=SERVER2: return ident
     user = line.split(":")
     return user[2]
 
 #Pings & Pongs
 def ping():
-    if(line.find("PING")!= -1):
+    if line.find("PING") != -1:
         sock.send(("PONG"+args("PING")).encode())
 
 #Send message to channel
