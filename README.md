@@ -3,6 +3,8 @@ PhaseBot
 
 An IRC Bot with some neat functions.
 
+An Addon for Twitch will be coming soon, just need to mess with the API a little bit.
+
 Commands
 ========
 
